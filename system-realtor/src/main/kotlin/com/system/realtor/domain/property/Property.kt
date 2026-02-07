@@ -8,14 +8,17 @@ import com.system.realtor.domain.Realtor
    매물
  */
 class Property(
-   val residentialType: ResidentialType,     // 주거형태
-   val building: String,                     // 동
-   val unit: String,                         // 호
+
+   //계약 객체
+   val contractEndDate: LocalDate,           // 만기일
    val price: String,                        // 가격
    val status: String,                        // 상태
-   val area: String,                          // 평형
-   val contractEndDate: LocalDate,           // 만기일
-   val landLoad: String,                      // 임대(매도)인
+
+   val landLoad: Landlord,                      // 임대(매도)인
+
+   //주소 vo
+   val address: Address,                      // 주소
+
    val realtor: Realtor
 ) {
 
